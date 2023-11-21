@@ -24,6 +24,9 @@ Route::group(['middleware'=>'sitesetting'], function() {
 
     Route::get('/', [PageHomeController::class,'home'])->name('home');
 
+
+
+    
     Route::get('/products', [PageController::class,'products'])->name('products');
     Route::get('/men/{slug?}', [PageController::class,'products'])->name('menproducts');
     Route::get('/women/{slug?}', [PageController::class,'products'])->name('womenproducts');
