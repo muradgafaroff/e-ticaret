@@ -513,7 +513,8 @@ a {
   .site-blocks-2 .block-2-item .image {
     position: relative;
     margin-bottom: 0;
-    overflow: hidden; }
+    overflow: hidden;
+  height: 350px; }
     .site-blocks-2 .block-2-item .image img {
       margin-bottom: 0;
       -webkit-transition: .3s all ease-in-out;

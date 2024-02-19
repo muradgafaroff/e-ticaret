@@ -49,7 +49,7 @@ class SliderController extends Controller
             }
 
 
-            return back()->withSuccess('Başarıyla Oluşturuldu!');
+            return back()->withSuccess('Created Successfully!');
     }
 
     /**
@@ -90,7 +90,7 @@ class SliderController extends Controller
         }
 
 
-        return back()->withSuccess('Başarıyla Güncellendi!');
+        return back()->withSuccess('Updated successfully!');
     }
 
     /**
@@ -112,7 +112,7 @@ class SliderController extends Controller
 
 
         $slider->delete();
-        return response(['error'=>false,'message'=>'Başarıyla Silindi.']);
+        return response(['error'=>false,'message'=>'Deleted Successfully.']);
     }
 
     public function status(Request $request) {

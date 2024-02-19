@@ -88,7 +88,7 @@
 
                   <div class="form-group">
                     <label for="content">Content Article</label>
-                    <textarea class="form-control" id="content" name="content" rows="3" placeholder="Kategori Yazısı">{{$category->content ?? ''}}</textarea>
+                    <textarea class="form-control" id="content" name="content" rows="3" placeholder="Category Note">{{$category->content ?? ''}}</textarea>
                   </div>
 
                   <div class="form-group">

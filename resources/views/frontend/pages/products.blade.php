@@ -123,6 +123,16 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
                         <a class="block-2-item" href="{{route($category->slug.'products')}}">
                           <figure class="image">
+                          @if (isset($category) && !empty($category->images->data))
+                        @php
+                        $images = collect($category->images->data ?? '');
+                        @endphp
+                        @foreach ($images as $item)
+                        <div class="item mx-4" data-id="{{$category->id}}" data-model="Category" data-image_no="{{$item['image_no']}}">
+                            <img src="{{asset($item['image'])}}" class="img-thumbnail">  
+                        </div>
+                        @endforeach
+                    @endif
                             <img src="{{asset($category->image)}}" alt="" class="img-fluid">
                           </figure>
                           <div class="text">

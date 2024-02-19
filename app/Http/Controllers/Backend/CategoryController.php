@@ -46,7 +46,7 @@ class CategoryController extends Controller
                 $this->fileSave('Category', 'kategori', $request, $category);
             }
 
-            return back()->withSuccess('Başarıyla Oluşturuldu!');
+            return back()->withSuccess('Created Successfully!');
     }
 
     /**
@@ -86,10 +86,10 @@ class CategoryController extends Controller
 
 
         if ($request->hasFile('image')) {
-            $this->fileSave('Category', 'kategori', $request, $category);
+            $this->fileSave('Category', 'category', $request, $category);
         }
 
-        return back()->withSuccess('Başarıyla Güncellendi!');
+        return back()->withSuccess('Successfully Updated!');
     }
 
     /**
@@ -110,7 +110,7 @@ class CategoryController extends Controller
         }
 
         $category->delete();
-        return response(['error'=>false,'message'=>'Başarıyla Silindi.']);
+        return response(['error'=>false,'message'=>'Deleted Successfully.']);
     }
 
     public function status(Request $request) {
