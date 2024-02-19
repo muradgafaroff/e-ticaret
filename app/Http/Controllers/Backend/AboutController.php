@@ -41,6 +41,6 @@ class AboutController extends Controller
                 $this->fileSave('About', 'about', $request, $about);
             }
 
-            return back()->withSuccess('Başarıyla Güncellendi!');
+            return back()->withSuccess('Successfully Updated!');
     }
 }
